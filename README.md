@@ -1,1 +1,3 @@
-# -bin
+# !bin - Keeping things simple!
+
+Documentation coming soon...
