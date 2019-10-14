@@ -26,7 +26,7 @@ class App():
 		#--------NORMAL VARIABLES--------------
 
 		self.raiz.geometry("660x525")
-		self.raiz.title(" !bin")
+		self.raiz.title("!bin - Keeping things simple!")
 		self.raiz.resizable(False,False)
 		self.raiz.iconbitmap("assets/bin_small_cont.ico")
 
