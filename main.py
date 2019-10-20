@@ -323,7 +323,7 @@ class App():
 
     def reset(self):  # Non-constant variables reset
 
-        size.size_obj.sizeVar = "0.0 MB"
+        self.sizeVar.set("0.0 MB")
         size.size_obj.totalSize = 0
 
         self.videoList.delete(0, END)
