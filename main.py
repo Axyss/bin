@@ -1,3 +1,4 @@
+# coding=utf-8
 # 18:34 24/09/19 Project starts.
 # 16:31 29/09/19 Entire project restructured.
 # 23:40 11/10/19 First version (1.0) finished.
@@ -201,7 +202,7 @@ class App():
             takefocus=False,
 
             command=lambda: wopen(
-                "https://github.com/Axyss"
+                "https://twitter.com/Axyss_"
             )
         )
 
@@ -321,10 +322,11 @@ class App():
 
             self.entryDir.set(self.manualDir)
 
-    def reset(self):  # Non-constant variables reset
-
+    def reset(self):
+        """Calls all reset methods from any other
+        classes and resets the own class variables"""
         self.sizeVar.set("0.0 MB")
-        size.size_obj.totalSize = 0
+        size.size_obj.reset()
 
         self.videoList.delete(0, END)
 
@@ -338,7 +340,9 @@ class App():
         self.door = True
         self.totalSize = 0
 
+
     def delete(self):
+        """Deletes filtered beatmaps"""
 
         if len(self.videoFiltered) == 0:
 
@@ -369,8 +373,6 @@ class App():
             else:
 
                 return None
-
-    # todo Hacer que el archivo se pueda utilizar en modo onefile
 
     def genListBox(self):
 
