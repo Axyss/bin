@@ -5,7 +5,6 @@ class Size():
 
     def __init__(self):
 
-        self.sizeVar = ""
         self.sizeVar = "0.0 MB"
         self.totalSize = 0
 
@@ -24,5 +23,5 @@ class Size():
 
         return self.sizeVar
 
-obj_size = Size()
+size_obj = Size()
 
