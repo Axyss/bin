@@ -390,13 +390,13 @@ class App():
     def checkSwitch(self):
 
         if self.checkVal.get() == 0:
-
             self.dirEntry.config(state="normal")
             self.browseButton.config(state="normal")
-        else:
 
+        else:
             self.dirEntry.config(state="disabled")
             self.browseButton.config(state="disabled")
+
 
     def chooseDir(self):
 
