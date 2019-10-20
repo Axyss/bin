@@ -16,7 +16,6 @@ from tkinter import ttk
 from webbrowser import open as wopen
 
 
-
 class App():
 
     def __init__(self):
@@ -28,7 +27,7 @@ class App():
         self.raiz.geometry("660x525")
         self.raiz.title("!bin - Keeping things simple!")
         self.raiz.resizable(False, False)
-        self.raiz.iconbitmap("assets/bin_small_cont.ico")
+        self.raiz.iconbitmap(self.resource_path("assets/bin_small_cont.ico"))
 
         self.offset = 115
         self.vOffset = -95
@@ -39,6 +38,7 @@ class App():
         self.checkVal.set(1)
 
         self.sizeVar = StringVar()
+        self.sizeVar.set("0.0 MB")
 
         self.letters = ("C", "D", "E", "F")  # Tuple containing main letters non-volatile memories are assigned
         self.currentTry = ""
@@ -177,7 +177,7 @@ class App():
         # ---------------ICON SET-UP---------------
 
         self.aminoBut = Button(self.frame1)
-        self.aminoIco = PhotoImage(file="assets/amino_ico.png")
+        self.aminoIco = PhotoImage(file=self.resource_path("assets/amino_ico.png"))
 
         self.aminoBut.config(
             image=self.aminoIco,
@@ -191,7 +191,7 @@ class App():
         )
 
         self.twitterBut = Button(self.frame1)
-        self.twitterIco = PhotoImage(file="assets/twitter_ico.png")
+        self.twitterIco = PhotoImage(file=self.resource_path("assets/twitter_ico.png"))
 
         self.twitterBut.config(
             image=self.twitterIco,
@@ -206,7 +206,7 @@ class App():
         )
 
         self.githubBut = Button(self.frame1)
-        self.githubIco = PhotoImage(file="assets/github_ico.png")
+        self.githubIco = PhotoImage(file=self.resource_path("assets/github_ico.png"))
 
         self.githubBut.config(
             image=self.githubIco,
@@ -221,7 +221,7 @@ class App():
         )
 
         self.binBut = Button(self.frame1)
-        self.binIco = PhotoImage(file="assets/bin_ico.png")
+        self.binIco = PhotoImage(file=self.resource_path("assets/bin_ico.png"))
 
         self.binBut.config(
             image=self.binIco,
@@ -232,7 +232,7 @@ class App():
         )
 
         self.recycleLabel = Label(self.frame1)
-        self.recycleIco = PhotoImage(file="assets/recycle_ico.png")
+        self.recycleIco = PhotoImage(file=self.resource_path("assets/recycle_ico.png"))
 
         self.recycleLabel.config(
             image=self.recycleIco,
@@ -297,7 +297,7 @@ class App():
 
         self.genListBox()  # Generates the listbox with the file names
 
-        self.sizeVar.set(size.size_obj.obtainSize(self.videoFiltered)) # Updates the file size label
+        self.sizeVar.set(size.size_obj.obtainSize(self.videoFiltered))  # Updates the file size label
 
         self.findVideosButton.config(state="enabled")  # Enables the find videos button
         self.deleteButton.config(state="enabled")  # Disables the find videos button
@@ -370,7 +370,7 @@ class App():
 
                 return None
 
-# todo Hacer que el archivo se pueda utilizar en modo onefile
+    # todo Hacer que el archivo se pueda utilizar en modo onefile
 
     def genListBox(self):
 
@@ -456,17 +456,27 @@ class App():
     def eggrun(self):
 
         if egg.egg_obj.egg():
-
             del self.binIco
             del self.binBut
 
             Label(self.frame1,
-                text="I'll be back\n -Binny",
-                font=("COMIC SANS MS", 15)
-                ).place(
+                  text="I'll be back\n -Binny",
+                  font=("COMIC SANS MS", 15)
+                  ).place(
                 x=30,
                 y=50
             )
+
+    def resource_path(self, relative_path):
+        try:
+            # PyInstaller creates a temp folder and stores path in _MEIPASS
+            base_path = sys._MEIPASS
+
+        except Exception:
+            base_path = os.path.abspath(".")
+
+        return os.path.join(base_path, relative_path)
+
     # -------------------------OSU!BIN GRAPHICAL DESIGN---------------------------
 
     def render(self):
@@ -518,6 +528,7 @@ class App():
         self.recycleLabel.place(x=495, y=307)
 
         self.raiz.mainloop()
+
 
 if __name__ == "__main__":
     windowo = App()
