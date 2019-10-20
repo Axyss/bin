@@ -1,7 +1,7 @@
 # USED JUST FOR TESTING PURPOSES
 #-------------------------------------------
 # Fills every beatmap folder with trash files with .avi, .flv and .mp4 extensions.
-# Warn: If does not work for you, modify the variable "mydir" below.
+# Warn: If It does not work for you, modify the variable "mydir" below.
 
 import os
 
