@@ -297,7 +297,7 @@ class App():
 
         self.genListBox()  # Generates the listbox with the file names
 
-        self.sizeVar.set(size.obj_size.obtainSize(self.videoFiltered)) # Updates the file size label
+        self.sizeVar.set(size.size_obj.obtainSize(self.videoFiltered)) # Updates the file size label
 
         self.findVideosButton.config(state="enabled")  # Enables the find videos button
         self.deleteButton.config(state="enabled")  # Disables the find videos button
@@ -323,7 +323,8 @@ class App():
 
     def reset(self):  # Non-constant variables reset
 
-        self.sizeVar.set("0.0 MB")
+        size.size_obj.sizeVar = "0.0 MB"
+        size.size_obj.totalSize = 0
 
         self.videoList.delete(0, END)
 
