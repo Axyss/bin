@@ -1,14 +1,15 @@
-from tkinter import *
+# coding=utf-8
 from os import getlogin
 from tkinter import messagebox
 
 
-class Webo():
+class Webo:
 
     def __init__(self):
         self.eggVar = 0
 
     def egg(self):
+        """You shouldn't be here, this was supossed to be an easter egg àwá"""
         self.eggVar += 1
 
         if self.eggVar == 10:
@@ -16,19 +17,17 @@ class Webo():
                                 )
 
         elif self.eggVar == 20:
-            messagebox.showinfo("?", "There is nothing over here."
+            messagebox.showinfo(
+                "?", "There is nothing over here."
                                 )
 
         elif self.eggVar == 30:
             messagebox.showinfo(
                 "?", "Don't you have nothing to do " +
-                     str(getlogin())
-                     + "?"
-            )
+                     str(getlogin()) + "?")
 
         elif self.eggVar == 40:
-            messagebox.showinfo("?", "Stop or I'll shutdown your computer àwá"
-                                )
+            messagebox.showinfo("?", "Stop or I'll shutdown your computer àwá")
 
         elif self.eggVar == 45:
             messagebox.showinfo("?", "Just kidding, I would't do that ewe")
@@ -54,6 +53,5 @@ class Webo():
             return True
 
 
-
-
-egg_obj = Webo()
+if __name__ != "__main__":
+    egg_obj = Webo()
