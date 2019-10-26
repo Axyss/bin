@@ -51,8 +51,7 @@ class Automatic:
                     break
 
                 else:
-
-                    print("Directory not found at", self.currentTry)
+                    #  print("Directory not found at", self.currentTry)
                     self.currentTry = ""
 
             if self.currentTry == "":
