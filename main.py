@@ -3,12 +3,15 @@
 # 16:31 29/09/19 Entire project restructured.
 # 23:40 11/10/19 First version (1.0) finished.
 # 20:41 14/10/19 Version (1.0) debugged.
+# 16:46 26/10/19 Project successfully modularized v1.1
 
 
 import os
 import threading
+
 import egg
 import size
+import auto
 
 from tkinter import *
 from tkinter import filedialog
@@ -17,7 +20,7 @@ from tkinter import ttk
 from webbrowser import open as wopen
 
 
-class App():
+class Main:
 
     def __init__(self):
 
@@ -30,27 +33,16 @@ class App():
         self.raiz.resizable(False, False)
         self.raiz.iconbitmap(self.resource_path("assets/bin_small_cont.ico"))
 
-        self.offset = 115
+        self.hOffset = 115
         self.vOffset = -95
 
-        self.entryDir = StringVar()
+        self.dirEntryVar = StringVar()
 
         self.checkVal = IntVar()
         self.checkVal.set(1)
 
         self.sizeVar = StringVar()
         self.sizeVar.set("0.0 MB")
-
-        self.letters = ("C", "D", "E", "F")  # Tuple containing main letters non-volatile memories are assigned
-        self.currentTry = ""
-        self.manualDir = ""
-
-        self.videoFiltered = []
-        self.bmFiltered = []
-        self.currentID = ""
-
-        self.listaNum = ("0", "1", "2", "3", "4", "5", "6", "7", "8", "9")
-        self.door = True
 
         # ----------INTERFACE INSTANCES----------------
 
@@ -60,10 +52,10 @@ class App():
             height=620,
         )
 
-        self.caja2 = ttk.LabelFrame(
+        self.container2 = ttk.LabelFrame(
             self.frame1,
             width=600,
-            height=295,
+            height=300,
             text="Results"
         )
 
@@ -73,7 +65,7 @@ class App():
             height=242,
         )
 
-        self.caja1 = ttk.LabelFrame(
+        self.container1 = ttk.LabelFrame(
             self.frame1,
             width=470,
             height=140,
@@ -86,7 +78,7 @@ class App():
             font=("Calibri", 10)
         )
 
-        self.songDir = ttk.Label(
+        self.songDirLabel = ttk.Label(
             self.frame1,
             text="Custom 'Songs' folder:",
             font=("Calibri", 11)
@@ -115,16 +107,16 @@ class App():
             takefocus=False,
             cursor="hand2",
             variable=self.checkVal,
-            command=lambda: self.checkSwitch(),
+            command=lambda: self.check_switch(),
 
             onvalue=1,
             offvalue=0
         )
 
-        self.dirEntry = ttk.Entry(
+        self.dirEntryWidget = ttk.Entry(
             self.frame1,
             width=50,
-            textvariable=self.entryDir,
+            textvariable=self.dirEntryVar,
             state="disabled"
         )
 
@@ -132,7 +124,7 @@ class App():
             self.frame1,
             text="Browse...",
             width=13,
-            command=lambda: self.browseWindow(),
+            command=lambda: self.browse_window(),
             state="disabled"
         )
 
@@ -140,7 +132,7 @@ class App():
             self.frame1,
             text="Find videos",
             width=20,
-            command=lambda: self.findThread()
+            command=lambda: self.find_thread()
         )
 
         self.videoList = Listbox(
@@ -172,7 +164,7 @@ class App():
             self.frame1,
             text="Delete videos",
             width=15,
-            command=lambda: self.deleteThread()
+            command=lambda: self.delete_thread()
         )
 
         # ---------------ICON SET-UP---------------
@@ -229,7 +221,7 @@ class App():
             border=0,
             relief="sunken",
             takefocus=False,
-            command=lambda: self.eggrun()
+            command=lambda: self.egg_run()
         )
 
         self.recycleLabel = Label(self.frame1)
@@ -241,78 +233,37 @@ class App():
             relief="sunken"
         )
 
-    def setDefaultDir(self):  # Unique callable method
+    #  ------------------------------MAIN METHODS------------------------------
+    def start(self):
 
-        self.reset()
+        self.reset()  # Removes all info from previous executions
 
-        self.temporary = self.chooseDir()
-
-        if self.temporary == "Error":
-            messagebox.showerror("Error", "The selected directory does not exist.")
-            return None
+        if (auto.auto_obj.choose_dir(self.checkVal.get(), self.dirEntryVar.get())) == "error":
+            return None  # Stops the function in case some part of choose_dir() returns error
 
         self.findVideosButton.config(state="disabled")  # Disables the find videos button
         self.deleteButton.config(state="disabled")  # Disables the delete button
 
-        for bm in os.listdir():  # Looking for just beatmap folders
+        auto.auto_obj.check_dirs()
+        auto.auto_obj.filter_videos()
 
-            self.door = True
+        self.gen_listbox(auto.auto_obj.filtered_video_list)  # Generates the listbox with the file names
 
-            if bm.count(" ") == 0:  # Skip files/folders in "Songs" without spaces.
-                continue
-
-            else:
-                self.currentID = bm[0:bm.find(" ")]
-                # print(type(self.currentID))
-
-                for char in self.currentID:
-
-                    if char in self.listaNum:
-                        continue
-
-                    else:
-
-                        # print(bm,"no es válido")
-                        self.door = False
-                        break
-
-                if self.door:
-                    self.bmFiltered.append(self.currentTry + "/" + bm)
-
-        for directory in self.bmFiltered:  # Looking for videos
-
-            os.chdir(directory)
-
-            for file in os.listdir():
-
-                # FILTERS
-
-                if ".avi" in file:
-                    self.videoFiltered.append(directory + "/" + file)
-
-                if ".mp4" in file:
-                    self.videoFiltered.append(directory + "/" + file)
-
-                if ".flv" in file:
-                    self.videoFiltered.append(directory + "/" + file)
-
-        self.genListBox()  # Generates the listbox with the file names
-
-        self.sizeVar.set(size.size_obj.obtainSize(self.videoFiltered))  # Updates the file size label
+        self.sizeVar.set(size.size_obj.obtain_size(auto.auto_obj.filtered_video_list))  # Updates the file size label
 
         self.findVideosButton.config(state="enabled")  # Enables the find videos button
-        self.deleteButton.config(state="enabled")  # Disables the find videos button
+        self.deleteButton.config(state="enabled")  # Enables the Delete videos button
 
-        # Shows state window
+        # Shows the appropriate window
 
-        if len(self.videoFiltered) == 0:
+        if len(auto.auto_obj.filtered_video_list) == 0:
             messagebox.showinfo("Information", "Congrats, you have no videos :)")
 
         else:
-            # print(self.videoFiltered)
             messagebox.showinfo("Information", "Scanning completed!")
 
-    def browseWindow(self):
+    def browse_window(self):
+        """Manages the custom window option"""
 
         self.manualDir = filedialog.askdirectory(initialdir="/")
 
@@ -320,31 +271,22 @@ class App():
             os.chdir(self.manualDir)
             print("Entering", self.manualDir)
 
-            self.entryDir.set(self.manualDir)
+            self.dirEntryVar.set(self.manualDir)
 
     def reset(self):
         """Calls all reset methods from any other
         classes and resets the own class variables"""
-        self.sizeVar.set("0.0 MB")
+
         size.size_obj.reset()
+        self.sizeVar.set("0.0 MB")
+        auto.auto_obj.reset()
 
         self.videoList.delete(0, END)
-
-        self.currentTry = ""
-        self.manualDir = ""
-
-        self.videoFiltered.clear()
-        self.bmFiltered.clear()
-        self.currentID = ""
-
-        self.door = True
-        self.totalSize = 0
-
 
     def delete(self):
         """Deletes filtered beatmaps"""
 
-        if len(self.videoFiltered) == 0:
+        if len(auto.auto_obj.filtered_video_list) == 0:
 
             messagebox.showerror("Error", "First run a scan.")
             return None
@@ -359,103 +301,63 @@ class App():
 
             if decision == "yes":
 
-                for i in self.videoFiltered:
+                for i in auto.auto_obj.filtered_video_list:
                     os.remove(i)
-                # print (f"File {i} removed.")# Testing purposes
+                # print (f"File {i} removed.")  # Debug
 
                 self.reset()
 
                 messagebox.showinfo(
                     "Information",
-                    "All beatmap videos were succesfully deleted."
+                    "All beatmap videos were successfully deleted."
                 )
 
             else:
 
                 return None
 
-    def genListBox(self):
+    def gen_listbox(self, video_list):
+        """Draw the parameter given in the listbox"""
 
-        for item in self.videoFiltered:
+        for item in video_list:
             pos1 = item.rfind("/")  # Finds the first slash
 
-            subItem = item[0:pos1]  # Creates a subString from 0 to the first slash
+            sub_item = item[0:pos1]  # Creates a subString from 0 to the first slash
 
-            pos2 = subItem.rfind("/")  # Finds the second slash using the last subString
+            pos2 = sub_item.rfind("/")  # Finds the second slash using the last subString
 
-            finalItem = item[pos2:]  # Creates a subString from second slash to the end
+            final_item = item[pos2:]  # Creates a subString from second slash to the end
 
-            self.videoList.insert(END, " " + finalItem)  # Sets the beatmap name in the listbox
+            self.videoList.insert(END, " " + final_item)  # Sets the beatmap name in the listbox
 
-    def checkSwitch(self):
+    def check_switch(self):
+        """Alternates the state of the checkbutton, entry and browse button"""
 
         if self.checkVal.get() == 0:
-            self.dirEntry.config(state="normal")
+            self.dirEntryWidget.config(state="normal")
             self.browseButton.config(state="normal")
 
         else:
-            self.dirEntry.config(state="disabled")
+            self.dirEntryWidget.config(state="disabled")
             self.browseButton.config(state="disabled")
 
-
-    def chooseDir(self):
-
-        if self.checkVal.get() == 1:
-
-            for i in self.letters:  # Looking for the Songs directory
-
-                self.currentTry = i + ":/Users/" + os.getlogin() + "/AppData/Local/osu!/Songs"
-
-                if os.path.isdir(self.currentTry):
-
-                    os.chdir(self.currentTry)
-                    print("Directory", self.currentTry, "succesfully found!")
-                    break
-
-                else:
-
-                    print("Directory not found at", self.currentTry)
-                    self.currentTry = ""
-
-            if self.currentTry == "":
-                messagebox.showerror('Error', "Default folder couldn't be found" +
-                                     "\n use the custom directory option"
-                                     )
-                return "Error"
-
-        elif self.checkVal.get() == 0 and self.dirEntry.get() != "":
-
-            self.currentTry = self.dirEntry.get()
-
-            if os.path.isdir(self.currentTry):
-
-                os.chdir(self.currentTry)
-                print("Directory", self.currentTry, "succesfully found!")
-
-            else:
-
-                print("Directory not found at", self.currentTry)
-                self.currentTry = ""
-                return "Error"
-
-        else:
-            return "Error"
-
-    def findThread(self):
+    def find_thread(self):
+        """Starts the function start() in a different thread."""
 
         threading.Thread(
-            target=lambda: self.setDefaultDir(),
+            target=lambda: self.start(),
             args=""
         ).start()
 
-    def deleteThread(self):
+    def delete_thread(self):
+        """Starts the function delete() in a different thread"""
 
         threading.Thread(
             target=lambda: self.delete(),
             args=""
         ).start()
 
-    def eggrun(self):
+    def egg_run(self):
 
         if egg.egg_obj.egg():
             del self.binIco
@@ -470,8 +372,9 @@ class App():
             )
 
     def resource_path(self, relative_path):
+        """Folder getter in case onefile mode is used in Pyinstaller"""
+
         try:
-            # PyInstaller creates a temp folder and stores path in _MEIPASS
             base_path = sys._MEIPASS
 
         except Exception:
@@ -482,56 +385,49 @@ class App():
     # -------------------------OSU!BIN GRAPHICAL DESIGN---------------------------
 
     def render(self):
+        """Renders the graphical interface"""
 
+        # Frames
         self.frame1.pack()
-
-        self.caja2.place(x=30, y=280 + self.vOffset)
-
         self.frame2.place(x=55, y=300 + self.vOffset)
 
-        self.caja1.place(x=45 + self.offset, y=120 + self.vOffset)
+        # Containers
+        self.container1.place(x=45 + self.hOffset, y=120 + self.vOffset)
+        self.container2.place(x=30, y=272 + self.vOffset)
 
+        # Labels
         self.sizeLabel.place(x=10, y=595 + self.vOffset)
-
         self.sizeLabelDyn.place(x=170, y=593 + self.vOffset)
-
-        self.songDir.place(x=60 + self.offset, y=190 + self.vOffset)
-
         self.authorLabel.place(x=550, y=594 + self.vOffset)
+        self.checkBoxLabel.place(x=110 + self.hOffset, y=148 + self.vOffset)
+        self.songDirLabel.place(x=60 + self.hOffset, y=190 + self.vOffset)
+        self.recycleLabel.place(x=495, y=307)
 
-        self.checkBoxLabel.place(x=110 + self.offset, y=148 + self.vOffset)
+        # Buttons
+        self.findVideosButton.place(x=368 + self.hOffset, y=148 + self.vOffset)
+        self.deleteButton.place(x=515, y=400 + self.vOffset)
+        self.browseButton.place(x=410 + self.hOffset, y=218 + self.vOffset)
 
-        self.checkBox1.place(x=80 + self.offset, y=150 + self.vOffset)
+        # Icon buttons
+        self.binBut.place(x=13, y=25)
+        self.twitterBut.place(x=590, y=434)
+        self.githubBut.place(x=550, y=434)
 
-        self.dirEntry.place(x=80 + self.offset, y=220 + self.vOffset)
-
-        self.browseButton.place(x=410 + self.offset, y=218 + self.vOffset)
-
-        self.findVideosButton.place(x=368 + self.offset, y=148 + self.vOffset)
-
-        self.videoList.grid(row=0, column=0)
-
+        # Scrollbars
         self.yscrollVideo.grid(row=0, column=1, sticky="ns")
-
         self.xscrollVideo.grid(row=1, column=0, sticky="ew")
 
-        self.deleteButton.place(x=515, y=400 + self.vOffset)
+        # Misc
+        self.checkBox1.place(x=80 + self.hOffset, y=150 + self.vOffset)
+        self.dirEntryWidget.place(x=80 + self.hOffset, y=220 + self.vOffset)
+        self.videoList.grid(row=0, column=0)
 
-        # ---------------PLACE() ICONS-----------------
-
-        self.binBut.place(x=13, y=25)
-
-        self.twitterBut.place(x=590, y=432)
-
-        self.githubBut.place(x=550, y=432)
-
+        # Unused
         # self.aminoBut.place(x=508,y=432)
-
-        self.recycleLabel.place(x=495, y=307)
 
         self.raiz.mainloop()
 
 
 if __name__ == "__main__":
-    windowo = App()
+    windowo = Main()
     windowo.render()
