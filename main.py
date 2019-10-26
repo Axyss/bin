@@ -3,22 +3,25 @@
 # 16:31 29/09/19 Entire project restructured.
 # 23:40 11/10/19 First version (1.0) finished.
 # 20:41 14/10/19 Version (1.0) debugged.
-# 16:46 26/10/19 Project successfully modularized v1.1
+# 16:46 26/10/19 Project successfully modularized.
+# 23:57 26/10/19 Version (1.1) finished and debugged.
 
-
+# Generic imports
 import os
+import sys
 import threading
+from webbrowser import open as wopen
 
+# Imported files
 import egg
 import size
 import auto
 
-from sys import platform
+# Tkinter imports
 from tkinter import *
 from tkinter import filedialog
 from tkinter import messagebox
 from tkinter import ttk
-from webbrowser import open as wopen
 
 
 class Main:
@@ -38,12 +41,15 @@ class Main:
         self.vOffset = -95
 
         self.dirEntryVar = StringVar()
+        self.manualDir = ""
 
         self.checkVal = IntVar()
         self.checkVal.set(1)
 
         self.sizeVar = StringVar()
         self.sizeVar.set("0.0 MB")
+
+        self.videoListLen = 0
 
         # ----------INTERFACE INSTANCES----------------
 
@@ -128,6 +134,14 @@ class Main:
             command=lambda: self.browse_window(),
             state="disabled"
         )
+
+        self.progressBar = ttk.Progressbar(
+            self.frame1,
+            orient="horizontal",
+            length=128,
+            mode="determinate",
+            maximum=100000
+        )  #  Here because must be rendered before the findVideosButton
 
         self.findVideosButton = ttk.Button(
             self.frame1,
@@ -234,6 +248,8 @@ class Main:
             relief="sunken"
         )
 
+
+
     #  ------------------------------MAIN METHODS------------------------------
     def start(self):
 
@@ -317,6 +333,15 @@ class Main:
 
                 return None
 
+    def increase_progress(self, video_list):
+        """Increases the progressbar value base on the lenght of the video list"""
+        a = 0
+        if a == 0:  # Executes this part once
+            self.videoListLen = 100000/len(video_list)  # Obtains how much to increase the progressbar each iteration.
+            a += 1
+
+        self.progressBar.step(self.videoListLen)
+
     def gen_listbox(self, video_list):
         """Draw the parameter given in the listbox"""
 
@@ -330,6 +355,7 @@ class Main:
             final_item = item[pos2:]  # Creates a subString from second slash to the end
 
             self.videoList.insert(END, " " + final_item)  # Sets the beatmap name in the listbox
+            self.increase_progress(video_list)
 
     def check_switch(self):
         """Alternates the state of the checkbutton, entry and browse button"""
@@ -368,8 +394,8 @@ class Main:
                   text="I'll be back\n -Binny",
                   font=("COMIC SANS MS", 15)
                   ).place(
-                x=30,
-                y=50
+                x=25,
+                y=55
             )
 
     def resource_path(self, relative_path):
@@ -422,6 +448,7 @@ class Main:
         self.checkBox1.place(x=80 + self.hOffset, y=150 + self.vOffset)
         self.dirEntryWidget.place(x=80 + self.hOffset, y=220 + self.vOffset)
         self.videoList.grid(row=0, column=0)
+        self.progressBar.place(x=484, y=64)
 
         # Unused
         # self.aminoBut.place(x=508,y=432)
@@ -431,7 +458,7 @@ class Main:
 
 if __name__ == "__main__":
     windowo = Main()
-    if platform != "win32":
+    if os.name != "nt":  # If the user does not use a Windows system, then the warn down below will be shown up.
         messagebox.showinfo("Warn",
                             "Oh oh, looks like you are not using Windows,\n" +
                             "automatic folder detection may not work for you.\n" +
@@ -439,4 +466,3 @@ if __name__ == "__main__":
                             icon='warning'
                             )
     windowo.render()
-
