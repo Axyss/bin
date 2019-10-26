@@ -27,7 +27,6 @@ class Automatic:
         self.door = True
 
     def construct_dirs(self):  # Method only called when class instanced
-        # type: () -> owo
         """Constructs all possible directories with the given parameters in
         self.templates and self.letters"""
 
