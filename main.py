@@ -13,6 +13,7 @@ import egg
 import size
 import auto
 
+from sys import platform
 from tkinter import *
 from tkinter import filedialog
 from tkinter import messagebox
@@ -430,4 +431,12 @@ class Main:
 
 if __name__ == "__main__":
     windowo = Main()
+    if platform != "win32":
+        messagebox.showinfo("Warn",
+                            "Oh oh, looks like you are not using Windows,\n" +
+                            "automatic folder detection may not work for you.\n" +
+                            "Use the: 'custom Songs folder' option if this happens.",
+                            icon='warning'
+                            )
     windowo.render()
+
