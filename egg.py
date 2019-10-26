@@ -9,7 +9,7 @@ class Webo:
         self.eggVar = 0
 
     def egg(self):
-        """You shouldn't be here, this was supossed to be an easter egg àwá"""
+        """You shouldn't be here, this was supposed to be an easter egg àwá"""
         self.eggVar += 1
 
         if self.eggVar == 10:
@@ -42,13 +42,13 @@ class Webo:
 
         elif self.eggVar == 65:
             messagebox.showinfo("Binny",
-                                "Looks like Axyss is working on a new cool osu! related project," +
-                                "\nbut don't tell him I told you :s"
+                                "Looks like Axyss is working on a new cool osu!" +
+                                "\nrelated project, but don't tell him I told you :s"
                                 )
 
         elif self.eggVar == 75:
-            messagebox.showinfo("Binny", "Oh f***, I LEFT THE OVEN ON," +
-                                "\nsorry " + getlogin() + " but I have to go :("
+            messagebox.showinfo("Binny", "Oh s***, NEW FARM MAP," +
+                                "\nsorry " + getlogin() + " but I have to go ;)"
                                 )
             return True
 
