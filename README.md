@@ -20,9 +20,9 @@ Easier than HAITAI right?
 <br/>
 __Mac and Linux:__
 <br/>
- <br/>_*Method 1:*_<br/>
-    &nbsp; &nbsp; Download [WineBottler](http://winebottler.kronenberg.org/) and run the .exe file.
+<br/>&nbsp; &nbsp; _*Method 1:*_<br/>
+Download [WineBottler](http://winebottler.kronenberg.org/) and run the .exe file.
     
-  _*Method 2:*_<br/>
-    &nbsp; &nbsp; In case you have [Python +3.0](https://www.python.org/downloads/) already installed, you could just download the entire     repository, extract it somewhere and&nbsp; &nbsp; &nbsp; &nbsp; then, open the script `main.py`.
+&nbsp; &nbsp; _*Method 2:*_<br/>
+In case you have [Python +3.0](https://www.python.org/downloads/) already installed, you could just download the entire repository, extract it somewhere and then, open the script `main.py`.
     
