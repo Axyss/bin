@@ -152,7 +152,7 @@ class Main:
 
         self.videoList = Listbox(
             self.frame2,
-            width=70,
+            width=72,
             height=15,
             borderwidth=0,
             highlightthickness=1,
@@ -238,17 +238,6 @@ class Main:
             takefocus=False,
             command=lambda: self.egg_run()
         )
-
-        self.recycleLabel = Label(self.frame1)
-        self.recycleIco = PhotoImage(file=self.resource_path("assets/recycle_ico.png"))
-
-        self.recycleLabel.config(
-            image=self.recycleIco,
-            border=0,
-            relief="sunken"
-        )
-
-
 
     #  ------------------------------MAIN METHODS------------------------------
     def start(self):
@@ -428,7 +417,6 @@ class Main:
         self.authorLabel.place(x=550, y=594 + self.vOffset)
         self.checkBoxLabel.place(x=110 + self.hOffset, y=148 + self.vOffset)
         self.songDirLabel.place(x=60 + self.hOffset, y=190 + self.vOffset)
-        self.recycleLabel.place(x=495, y=307)
 
         # Buttons
         self.findVideosButton.place(x=368 + self.hOffset, y=148 + self.vOffset)
