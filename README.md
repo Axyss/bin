@@ -16,7 +16,7 @@ Easier than HAITAI right?
 # Download
 
 __Windows:__
-  Click here or go to the "executables" folder of this repository and click _!bin.exe -> Download_
+  Click [here](https://github.com/Axyss/-bin/raw/master/executables/!bin.exe) or go to the "executables" folder of this repository and click _!bin.exe -> Download_
   <br/>
   <br/>
 __Mac and Linux:__
@@ -26,3 +26,4 @@ __Mac and Linux:__
     
   _*Method 2:*_<br/>
     In case you have Python +3.0 already installed, you could just download the entire repository, extract it somewhere and the open the       file main.py
+    
