@@ -1,4 +1,4 @@
-# !bin - Keeping things simple! (v1.1)
+# !bin - Keeping things simple! &nbsp; (v1.1)
 
 If you're an experienced osu! player you've probably already noticed that beatmap videos are too distracting 
 and you have ended up disabling them. 
@@ -15,12 +15,14 @@ Easier than HAITAI right?
 <br/>
 # Download
 <br/>__Windows:__
-  Click [here](https://github.com/Axyss/-bin/raw/master/executables/!bin.exe) or go to the "executables" folder of this repository and click  _`!bin.exe` -> Download_<br/>
+<br/>
+  &nbsp; &nbsp; Click [here](https://github.com/Axyss/-bin/raw/master/executables/!bin.exe) or go to the "executables" folder of this repository and click  _`!bin.exe` -> Download_<br/>
 <br/>
 __Mac and Linux:__
- <br/>_*Method 1:*_
-    Download [WineBottler](http://winebottler.kronenberg.org/) and run the .exe file.
+<br/>
+ <br/>_*Method 1:*_<br/>
+    &nbsp; &nbsp; Download [WineBottler](http://winebottler.kronenberg.org/) and run the .exe file.
     
   _*Method 2:*_<br/>
-    In case you have [Python +3.0](https://www.python.org/downloads/) already installed, you could just download the entire repository, extract it somewhere and the open the script `main.py`.
+    &nbsp; &nbsp; In case you have [Python +3.0](https://www.python.org/downloads/) already installed, you could just download the entire     repository, extract it somewhere and&nbsp; &nbsp; &nbsp; &nbsp; then, open the script `main.py`.
     
