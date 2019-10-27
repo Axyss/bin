@@ -16,9 +16,9 @@ Easier than HAITAI right?
 # Download
 
 
-__Windows:__
+__Windows:__<br/>
   Click [here](https://github.com/Axyss/-bin/raw/master/executables/!bin.exe) or go to the "executables" folder of this repository and click  _`!bin.exe` -> Download_
-
+<br/>
 __Mac and Linux:__
 
   _*Method 1:*_
