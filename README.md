@@ -23,5 +23,5 @@ __Mac and Linux:__<br/>
 &nbsp; &nbsp; &nbsp; &nbsp; Download [WineBottler](http://winebottler.kronenberg.org/) and run the .exe file.
     
 &nbsp; &nbsp; _*Method 2:*_<br/>
-&nbsp; &nbsp; &nbsp; &nbsp; In case you have [Python +3.0](https://www.python.org/downloads/) already installed, you could just download the entire repository, extract it somewhere &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; and then, open the script `main.py`.
+&nbsp; &nbsp; &nbsp; &nbsp; In case you have [Python +3.0](https://www.python.org/downloads/) already installed, you could just download the entire repository, extract it somewhere&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; and then, open the script `main.py`.
     
