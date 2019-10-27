@@ -23,5 +23,5 @@ Download <a href="http://winebottler.kronenberg.org/">WineBottler</a> and run th
 <h3>Method 2:</h3>
 Download the entire repository, extract it and open the script <b>main.py</b>. <a href="https://www.python.org/downloads/">Python +3.0</a> needed.
 <br/>&nbsp; 
-<br/>&nbsp; 
+<br/>&nbsp; <br/>
 Special thanks to Aimys for helping me with the disposition of the GUI elements.
