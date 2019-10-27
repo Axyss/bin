@@ -1,4 +1,4 @@
-# !bin - Keeping things simple!
+# !bin - Keeping things simple! (v1.1)
 
 If you're an experienced osu! player you've probably already noticed that beatmap videos are too distracting 
 and you have ended up disabling them. 
