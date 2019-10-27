@@ -25,5 +25,5 @@ __Mac and Linux:__
     Download [WineBottler](http://winebottler.kronenberg.org/) and run the .exe file.
     
   _*Method 2:*_<br/>
-    In case you have Python +3.0 already installed, you could just download the entire repository, extract it somewhere and the open the       file main.py
+    In case you have [Python +3.0](https://www.python.org/downloads/) already installed, you could just download the entire repository, extract it somewhere and the open the       file main.py
     
