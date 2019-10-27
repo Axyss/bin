@@ -24,4 +24,6 @@ __Mac and Linux:__<br/>
     
 &nbsp; &nbsp; _*Method 2:*_<br/>
 &nbsp; &nbsp; &nbsp; &nbsp; In case you have [Python +3.0](https://www.python.org/downloads/) already installed, you could just download the entire repository, extract it somewhere&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; and then, open the script `main.py`.
-    
+
+<br/>
+Special thanks to Aimys for helping me with the disposition of the GUI elements.
