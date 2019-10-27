@@ -14,16 +14,18 @@ Easier than HAITAI right?
 <br/>
 <br/>
 # Download
-<br/>__Windows:__
+<br/><h2>Windows:</h2>
 <br/>
-  &nbsp; &nbsp; Click [here](https://github.com/Axyss/-bin/raw/master/executables/!bin.exe) or go to the "executables" folder of this repository and click  _`!bin.exe` -> Download_<br/>
+Click <a href="https://github.com/Axyss/-bin/raw/master/executables/!bin.exe">here</a> or go to the "executables" folder of this repository and click  _`!bin.exe` -> Download_<br/>
 <br/>
-__Mac and Linux:__<br/>
-&nbsp; &nbsp; _*Method 1:*_<br/>
-&nbsp; &nbsp; &nbsp; &nbsp; Download [WineBottler](http://winebottler.kronenberg.org/) and run the .exe file.
-    
-&nbsp; &nbsp; _*Method 2:*_<br/>
-&nbsp; &nbsp; &nbsp; &nbsp; In case you have [Python +3.0](https://www.python.org/downloads/) already installed, you could just download the entire repository, extract it somewhere&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; and then, open the script `main.py`.
+<h2>Mac and Linux:</h2>
+<br/>
+<h3>Method 1:</h3>
+<br/>
+Download <a href="http://winebottler.kronenberg.org/">WineBottler</a> and run the .exe file.
+
+_*Method 2:*_<br/>
+In case you have [Python +3.0](https://www.python.org/downloads/) already installed, you could just download the entire repository, extract it somewhere and then, open the script `main.py`.
 
 <br/>
 Special thanks to Aimys for helping me with the disposition of the GUI elements.
