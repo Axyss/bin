@@ -21,5 +21,5 @@ Click <a href="https://github.com/Axyss/-bin/raw/master/executables/!bin.exe">he
 <h3>Method 1:</h3>
 Download <a href="http://winebottler.kronenberg.org/">WineBottler</a> and run the .exe file.
 <h3>Method 2:</h3>
-Download the entire repository, extract it open the script `main.py`. (<a href="https://www.python.org/downloads/">Python +3.0</a> needed).<br/>
-Special thanks to Aimys for helping me with the disposition of the GUI elements.
+Download the entire repository, extract it open the script `main.py`. (<a href="https://www.python.org/downloads/">Python +3.0</a> needed).
+<br/><br/>Special thanks to Aimys for helping me with the disposition of the GUI elements.
