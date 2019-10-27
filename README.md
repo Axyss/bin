@@ -10,7 +10,7 @@ But... what about removing that videos and free some space?
 # Interface screenshot
 <br/>![!bin ss](https://i.imgur.com/xeKsiqQ.png)
 
-You can also use It with <b>osu!lazer</b>. However, you have to use the "Custom Songs folder" option.
+It also supports <b>osu!lazer</b>. However, you have to use the "Custom Songs folder" option.
 <br/>
 <br/>
 # Download
