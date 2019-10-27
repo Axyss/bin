@@ -4,7 +4,7 @@ If you're an experienced osu! player you've probably already noticed that beatma
 and you have ended up disabling them. 
 But... what about removing that videos and free some space?
 
-!bin aims to be an __easy tool to get rid of all the beatmap videos__, forget those hard to understand batch (.bat) scripts, !bin implements a __very simple GUI__ and an __automatic beatmap video detecting algorithm__ so you resume your cicle clicking activities faster.
+!bin aims to be an __easy tool to get rid of all the beatmap videos__, forget those hard to understand batch (.bat) scripts, !bin implements a __very simple GUI__ and an __automatic beatmap video detecting algorithm__ so you resume your circle clicking activities faster.
 <br/>
 <br/>
 # Interface screenshot
