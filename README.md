@@ -14,14 +14,11 @@ Easier than HAITAI right?
 <br/>
 <br/>
 # Download
-
-
-__Windows:__<br/>
-  Click [here](https://github.com/Axyss/-bin/raw/master/executables/!bin.exe) or go to the "executables" folder of this repository and click  _`!bin.exe` -> Download_
+<br/>__Windows:__
+  Click [here](https://github.com/Axyss/-bin/raw/master/executables/!bin.exe) or go to the "executables" folder of this repository and click  _`!bin.exe` -> Download_<br/>
 <br/>
 __Mac and Linux:__
-
-  _*Method 1:*_
+ <br/>_*Method 1:*_
     Download [WineBottler](http://winebottler.kronenberg.org/) and run the .exe file.
     
   _*Method 2:*_<br/>
