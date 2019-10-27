@@ -8,7 +8,7 @@ But... what about removing that videos and free some space?
 <br/>
 <br/>
 # Interface screenshot
-![!bin ss](https://i.imgur.com/xeKsiqQ.png)
+<br/>![!bin ss](https://i.imgur.com/xeKsiqQ.png)
 
 Easier than HAITAI right?
 <br/>
