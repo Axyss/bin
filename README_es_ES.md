@@ -3,7 +3,7 @@
 Si eres un jugador de osu! experimentado, probablemente ya te habrás dado cuenta de que los vídeos de los beatmaps distraen demasiado, por lo que los habrás terminado desactivando. 
 Pero... ¿Qué hay de borrarlos y liberar algo de espacio?
 
-<b>!bin</b> busca ser una __herramienta sencilla para deshacerte de todos esos vídeos__, olvida esos scripts escritos en batch (.bat) difíciles de entender, !bin implementa una __GUI muy simple__ y un __algoritmo de detección automática de vídeos de beatmaps__ de forma que tú solo te preocupes de seguir clicando círculos.
+<b>!bin</b> busca ser una __herramienta sencilla para deshacerte de todos esos vídeos__, olvida esos scripts escritos en batch (.bat) difíciles de entender, !bin implementa una __GUI muy simple__ y un __algoritmo de detección automática de vídeos de beatmaps__ de forma que tú solo te tengas que preocupar de seguir clicando círculos.
 <br/>
 <br/>
 # Interfaz
