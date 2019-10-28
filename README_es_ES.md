@@ -18,7 +18,7 @@ Haz click <a href="https://github.com/Axyss/-bin/raw/master/executables/!bin.exe
 <br/>
 <h2>Mac y Linux:</h2>
 <h3>Método 1:</h3>
-Descarga <a href="http://winebottler.kronenberg.org/">WineBottler</a> y ejecuta el archivo .exe .
+Descarga <a href="http://winebottler.kronenberg.org/">WineBottler</a> y ejecuta el archivo !bin.exe .
 <h3>Método 2:</h3>
 Descarga el repositorio, extraelo y ejecuta el script <b>main.py</b>. Es necesario tener instalado <a href="https://www.python.org/downloads/">Python +3.0</a>.
 <br/>&nbsp; 
