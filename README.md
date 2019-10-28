@@ -1,6 +1,6 @@
 # !bin - Keeping things simple! &nbsp; (v1.1)
 
-<b>Language:</b> <a href="https://www.github.com/Axyss/-bin">English</a>, <a href="https://www.github.com/Axyss/-bin">Español</a>
+<b>Language:</b> <a href="https://www.github.com/Axyss/-bin">English</a>, <a href="https://github.com/Axyss/-bin/blob/master/README_es_ES.md#bin---keeping-things-simple--v11">Español</a>
 
 If you're an experienced osu! player you've probably already noticed that beatmap videos are too distracting so you have ended up disabling them. 
 But... what about removing that videos and free some space?
