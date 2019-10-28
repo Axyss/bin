@@ -3,7 +3,7 @@
 Si eres un jugador de osu! experimentado, probablemente ya te habrás dado cuenta de que los vídeos de los beatmaps distraen demasiado, por lo que los habrás terminado desactivando. 
 Pero... ¿Qué hay de borrarlos y liberar algo de espacio?
 
-<b>!bin</b> busca ser una __herramienta sencilla para deshacerte de todos esos vídeos__, olvida esos scripts escritos en batch (.bat) difíciles de entender, !bin implementa una __GUI muy simple__ y un __algoritmo de detección automática de vídeos de beatmaps__ de forma que tú solo te tengas que preocupar de seguir clicando círculos.
+<b>!bin</b> busca ser una __herramienta sencilla para deshacerte de todos esos vídeos__, olvida esos scripts escritos en batch (.bat) difíciles de entender, !bin implementa una __interfaz muy simple__ y un __algoritmo de detección automática de vídeos de beatmaps__ de forma que tú solo te tengas que preocupar de seguir clicando círculos.
 <br/>
 <br/>
 # Interfaz
@@ -23,4 +23,4 @@ Descarga <a href="http://winebottler.kronenberg.org/">WineBottler</a> y ejecuta 
 Descarga el repositorio, extraelo y ejecuta el script <b>main.py</b>. Es necesario tener instalado <a href="https://www.python.org/downloads/">Python +3.0</a>.
 <br/>&nbsp; 
 <br/>&nbsp; <br/>
-Agradecimiento especial a Aimys por ayudarme con la disposición de los elementos de la GUI.
+Agradecimiento especial a Aimys por ayudarme con la disposición de los elementos de la interfaz.
