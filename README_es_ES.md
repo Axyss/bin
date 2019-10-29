@@ -1,4 +1,4 @@
-# !bin - Keeping things simple! &nbsp; (v1.1)
+# !bin - Keeping things simple! &nbsp; (v1.1_2)
 
 <b>Idioma:</b> <a href="https://github.com/Axyss/-bin#bin---keeping-things-simple--v11">English</a>, <a href="https://github.com/Axyss/-bin/blob/master/README_es_ES.md#bin---keeping-things-simple--v11">Español</a>
 
