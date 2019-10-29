@@ -1,4 +1,4 @@
-# !bin - Keeping things simple! &nbsp; (v1.1_2)
+# !bin - Keeping things simple! &nbsp; (v1.1_2)<img src="https://img.shields.io/github/license/Axyss/-bin"></img>
 
 <b>Language:</b> <a href="https://github.com/Axyss/-bin#bin---keeping-things-simple--v11">English</a>, <a href="https://github.com/Axyss/-bin/blob/master/README_es_ES.md#bin---keeping-things-simple--v11">Español</a>
 
