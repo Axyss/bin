@@ -116,16 +116,18 @@ class Automatic:
             for file in os.listdir():
 
                 # FILTERS
-
-                if ".avi" in file:
-                    self.filtered_video_list.append(directory + "/" + file)
-
                 if ".mp4" in file:
+                    self.filtered_video_list.append(directory + "/" + file)
+                    
+                if ".avi" in file:
                     self.filtered_video_list.append(directory + "/" + file)
 
                 if ".flv" in file:
                     self.filtered_video_list.append(directory + "/" + file)
-
+                    
+                if ".wmv" in file:
+                    self.filtered_video_list.append(directory + "/" + file)
+                
     def reset(self):  # Called from main class.
         """Resets some vars of the class"""
 
