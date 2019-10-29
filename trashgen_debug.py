@@ -16,6 +16,7 @@ for i in dirList:
         open("Trash.flv", "+x")
         open("Trash.avi", "+x")
         open("Trassssssssssssssssssssssssssssssssssssssssssssssssssssh.mp4", "+x")
+        open("Trash.wmv", "+x")
 
     except:
         print("Seems this program has already been used, remove the files first.")
