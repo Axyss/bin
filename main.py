@@ -301,7 +301,8 @@ class Main:
 
             decision = messagebox.askquestion(
                 "Warn",
-                "Are you sure you want to delete?\nThis action cannot be undone.",
+                "Are you sure you want to delete?\nThis action cannot be undone."+
+                "\n\nTip: make a backup of your 'Songs' folder first.",
                 icon='warning'
             )
 
