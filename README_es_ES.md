@@ -16,7 +16,7 @@ También soporta <b>osu!lazer</b>. Sin embargo, tendrás que usar la opción "Cu
 <br/>
 # Descargar
 <h2>Windows:</h2>
-Haz click <a href="https://github.com/Axyss/-bin/raw/master/executables/!bin.exe">aquí</a> o ve a la carpeta "executables" y pulsa <b>!bin.exe -> Download</b><br/>
+Haz click (<a href="https://github.com/Axyss/-bin/raw/master/executables/!bin.exe">64-bits</a>, <a href="https://github.com/Axyss/-bin/raw/master/executables/!bin32.exe">32-bits</a>) o ve a la carpeta "executables" y pulsa <b>!bin.exe -> Download</b><br/>
 <br/>
 <h2>Mac y Linux:</h2>
 <h3>Método 1:</h3>
