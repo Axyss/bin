@@ -16,7 +16,7 @@ It also supports <b>osu!lazer</b>. However, you have to use the "Custom Songs fo
 <br/>
 # Download
 <h2>Windows:</h2>
-Click <a href="https://github.com/Axyss/-bin/raw/master/executables/!bin.exe">here</a> or go to the "executables" folder of this repository and click  <b>!bin.exe -> Download</b><br/>
+Select a version (<a href="https://github.com/Axyss/-bin/raw/master/executables/!bin.exe">64-bits</a>,<a href="https://github.com/Axyss/-bin/raw/master/executables/!bin32.exe">32-bits</a>) or go to the "executables" folder of this repository and click  <b>!bin.exe -> Download</b><br/>
 <br/>
 <h2>Mac and Linux:</h2>
 <h3>Method 1:</h3>
