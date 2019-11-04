@@ -7,6 +7,7 @@ class Automatic:
     def __init__(self):
 
         self.letters = ("C", "D", "E", "F")  # Units where the program will try to find osu!/songs
+        self.skipFiles = (".rar",".zip",".7z")
         self.templates = (
             ":/Users/" + os.getlogin() + "/AppData/Local/osu!/Songs",
             ":/Program Files/osu!/Songs",
@@ -90,6 +91,9 @@ class Automatic:
             if bm.count(" ") == 0:  # Skip files/folders in "Songs" without spaces
                 continue
 
+            if bm[-4:] in self.skipFiles:  # Skip compressed files
+                continue
+
             else:  # Detects if the folder is a beatmap one using the ID
                 self.currentID = bm[0:bm.find(" ")]
                 # print(type(self.currentID))
@@ -116,16 +120,16 @@ class Automatic:
             for file in os.listdir():
 
                 # FILTERS
-                if ".mp4" in file:
+                if ".mp4" in file[-4:]:
                     self.filtered_video_list.append(directory + "/" + file)
                     
-                if ".avi" in file:
+                elif ".avi" in file[-4:]:
                     self.filtered_video_list.append(directory + "/" + file)
 
-                if ".flv" in file:
+                elif ".flv" in file[-4:]:
                     self.filtered_video_list.append(directory + "/" + file)
                     
-                if ".wmv" in file:
+                elif ".wmv" in file[-4:]:
                     self.filtered_video_list.append(directory + "/" + file)
                 
     def reset(self):  # Called from main class.
