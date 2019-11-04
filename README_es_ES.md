@@ -1,4 +1,4 @@
-# !bin - Keeping things simple! &nbsp; <img src="https://img.shields.io/badge/version-1.1__2-brightgreen"></img> <img src="https://img.shields.io/github/license/Axyss/-bin"></img> <img src="https://img.shields.io/badge/compatible-osu!lazer-ff69b4"></img>
+# !bin - Keeping things simple! &nbsp; <img src="https://img.shields.io/badge/version-1.2-brightgreen"></img> <img src="https://img.shields.io/github/license/Axyss/-bin"></img> <img src="https://img.shields.io/badge/compatible-osu!lazer-ff69b4"></img>
 
 <b>Idioma:</b> <a href="https://github.com/Axyss/-bin#bin---keeping-things-simple--v11">English</a>, <a href="https://github.com/Axyss/-bin/blob/master/README_es_ES.md#bin---keeping-things-simple--v11">Español</a>
 
@@ -16,7 +16,7 @@ También soporta <b>osu!lazer</b>. Sin embargo, tendrás que usar la opción "Cu
 <br/>
 # Descargar
 <h2>Windows:</h2>
-Selecciona una versión (<a href="https://github.com/Axyss/-bin/raw/master/executables/!bin.exe">64-bits</a>, <a href="https://github.com/Axyss/-bin/raw/master/executables/!bin32.exe">32-bits</a>) o ve a la carpeta "executables" y pulsa <b>!bin.exe -> Download</b><br/>
+Selecciona una versión (<a href="https://github.com/Axyss/-bin/raw/master/executables/!bin_x64.exe">64-bits</a>, <a href="https://github.com/Axyss/-bin/raw/master/executables/!bin_x32.exe">32-bits</a>) o ve a la carpeta "executables" y pulsa <b>!bin.exe -> Download</b><br/>
 <br/>
 <h2>Mac y Linux:</h2>
 <h3>Método 1:</h3>
@@ -25,4 +25,8 @@ Descarga <a href="http://winebottler.kronenberg.org/">WineBottler</a> y ejecuta 
 Descarga el repositorio, extraelo y ejecuta el script <b>main.py</b>. Es necesario tener instalado <a href="https://www.python.org/downloads/">Python +3.0</a>.
 <br/>&nbsp; 
 <br/>&nbsp; <br/>
-Agradecimiento especial a Aimys por ayudarme con la disposición de los elementos de la interfaz.
+Agradecimientos especiales:
+</br>
+<b>Aimys</b> - (por ayudar con la GUI)
+</br>
+<b>Gandalphf-</b> - (por reportar errores)
