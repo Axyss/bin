@@ -25,7 +25,7 @@ Descarga <a href="http://winebottler.kronenberg.org/">WineBottler</a> y ejecuta 
 Descarga el repositorio, extraelo y ejecuta el script <b>main.py</b>. Es necesario tener instalado <a href="https://www.python.org/downloads/">Python +3.0</a>.
 <br/>&nbsp; 
 <br/>&nbsp; <br/>
-Agradecimientos especiales:
+<h4>Agradecimientos especiales:</h4>
 </br>
 <b>Aimys</b> - (por ayudar con la GUI)
 </br>
