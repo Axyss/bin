@@ -27,6 +27,6 @@ Descarga el repositorio, extraelo y ejecuta el script <b>main.py</b>. Es necesar
 <br/>&nbsp; <br/>
 <h4>Agradecimientos especiales:</h4>
 </br>
-<b>Aimys</b> - (por ayudar con la GUI)
+<b>Aimys</b> <i>Por ayudar con la GUI.</i>
 </br>
-<b>Gandalphf-</b> - (por reportar errores)
+<b>Gandalphf-</b> <i>Por reportar errores.</i>
