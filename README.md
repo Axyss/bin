@@ -27,6 +27,6 @@ Download the entire repository, extract it and open the script <b>main.py</b>. <
 <br/>&nbsp; <br/>
 <h4>Special thanks to:</h4>
 </br>
-<b>Aimys</b> - (for helping with the GUI)
+<b>Aimys</b> <i>For helping with the GUI.</i>
 </br>
-<b>Gandalphf-</b> - (for reporting bugs)
+<b>Gandalphf-</b> <i>For reporting bugs.</i>
