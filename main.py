@@ -140,7 +140,7 @@ class Main:
             orient="horizontal",
             length=128,
             mode="determinate",
-            maximum=100000
+            maximum=99999
         )  #  Here because must be rendered before the findVideosButton
 
         self.findVideosButton = ttk.Button(
