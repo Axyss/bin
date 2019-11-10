@@ -1,4 +1,4 @@
-# !bin - Keeping things simple! &nbsp; <img src="https://img.shields.io/badge/version-1.2-brightgreen"></img> <img src="https://img.shields.io/github/license/Axyss/-bin"></img> <img src="https://img.shields.io/badge/compatible-osu!lazer-ff69b4"></img>
+# !bin - Keeping things simple! &nbsp; <img src="https://img.shields.io/badge/version-1.2-brightgreen"></img> <img src="https://img.shields.io/github/license/Axyss/-bin"></img> <img src="https://img.shields.io/badge/compatible-osu!lazer-ff69b4"></img> <a href="https://www.codefactor.io/repository/github/axyss/-bin/overview/master"><img src="https://www.codefactor.io/repository/github/axyss/-bin/badge/master" alt="CodeFactor" /></a>
 
 <b>Idioma:</b> <a href="https://github.com/Axyss/-bin#bin---keeping-things-simple--v11">English</a>, <a href="https://github.com/Axyss/-bin/blob/master/README_es_ES.md#bin---keeping-things-simple--v11">Español</a>
 
