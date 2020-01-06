@@ -22,7 +22,7 @@ Select a version (<a href="https://github.com/Axyss/-bin/raw/master/executables/
 <h3>Method 1:</h3>
 Download <a href="http://winebottler.kronenberg.org/">WineBottler</a> and run !bin.exe.
 <h3>Method 2:</h3>
-Download the entire repository, extract it and open the script <b>main.py</b>. <a href="https://www.python.org/downloads/">Python +3.0</a> needed.
+Download the entire repository, extract it and open the script <b>main.py</b>. <a href="https://www.python.org/downloads/">Python +3.6</a> needed.
 <br/>&nbsp; 
 <br/>&nbsp; <br/>
 <h4>Special thanks to:</h4>
